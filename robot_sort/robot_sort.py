@@ -102,7 +102,8 @@ class SortingRobot:
 
         while self.light_is_on() is True:
 
-      
+          #once everything is sorted, light turns off and we exit
+          self.set_light_off()
 
           #start looping
           while self.can_move_right() is True:
@@ -110,7 +111,7 @@ class SortingRobot:
             self.swap_item()
             self.move_right()
 
-            #do the comparison. if it's larger, pick it up, move left, swap, move back right, and turn light on to continue sorting
+            #do the comparison. if it's larger: swap, move left, drop it, move back right, and turn light on to continue sorting
             if self.compare_item() == 1:
               self.swap_item()
               self.move_left()
@@ -124,7 +125,7 @@ class SortingRobot:
               self.swap_item()
               self.move_right()
 
-           
+          #move self to the left 
           if self.light_is_on():
             while self.can_move_left():
               self.move_left()
