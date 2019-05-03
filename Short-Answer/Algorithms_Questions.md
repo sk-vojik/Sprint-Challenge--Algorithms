@@ -3,7 +3,7 @@
 ## Exercise I
 
 Give an analysis of the running time of each snippet of
-pseudocode with respect to the input size n of each of the following:
+pseudocode with respect to the input size n of each of the following :
 
 ```
 a)  a = 0
